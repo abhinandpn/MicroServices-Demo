@@ -1,4 +1,4 @@
-module github.com/abhinandpn/MicroServices-Demo
+module github.com/abhinandpn/MicroServices-Demo/Admin-Service
 
 go 1.20
 
@@ -7,8 +7,6 @@ require (
 	github.com/go-playground/validator v9.31.0+incompatible
 	github.com/google/wire v0.5.0
 	github.com/spf13/viper v1.18.1
-	github.com/swaggo/files v1.0.1
-	github.com/swaggo/gin-swagger v1.6.0
 	github.com/swaggo/swag v1.16.2
 	gorm.io/driver/postgres v1.5.4
 	gorm.io/gorm v1.25.5
