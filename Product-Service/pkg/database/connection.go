@@ -18,7 +18,7 @@ func ConnectDatabase(cfg config.Config) (*gorm.DB, error) {
 	})
 
 	err := db.AutoMigrate(
-		model.Proruct{},
+		model.Product{},
 	)
 	// Error handling While Database Table creating
 	if err != nil {
