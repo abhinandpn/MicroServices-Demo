@@ -7,6 +7,11 @@ import (
 )
 
 func UserRoute(api *gin.RouterGroup,
-userhandler handlerinterface.UserHandler ){
-	
+	userhandler handlerinterface.UserHandler) {
+
+	api.POST("/signup", userhandler.SignUp)
+	api.POST("/login", userhandler.Login)
+	api.POST("/logout", userhandler.Logout)
+	api.GET("/", userhandler.UserHome)
+	api.GET("/info", userhandler.UserInfo)
 }
