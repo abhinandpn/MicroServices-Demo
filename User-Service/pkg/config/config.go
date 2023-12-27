@@ -6,11 +6,16 @@ import (
 )
 
 type Config struct {
+
+	// Database
 	DBHost     string `mapstructure:"DB_HOST"`
 	DBName     string `mapstructure:"DB_NAME"`
 	DBUser     string `mapstructure:"DB_USER"`
 	DBPort     string `mapstructure:"DB_PORT"`
 	DBPassword string `mapstructure:"DB_PASSWORD"`
+
+	// jwt
+	JWT string `mapstructure:"JWT_CODE"`
 }
 
 var envs = []string{
@@ -55,4 +60,10 @@ func LoadConfig() (Config, error) {
 func GetCofig() Config {
 	return config
 
+}
+
+// get JWT screct code
+func GetJWTCofig() string {
+
+	return config.JWT
 }
